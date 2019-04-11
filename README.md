@@ -164,8 +164,8 @@ Install parser by running:
 Contribute
 ----------
 
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
+- Issue Tracker: https://github.com/pamirian7/magic_parser/issues
+- Source Code: https://github.com/pamirian7/magic_parser
 
 Support
 -------
