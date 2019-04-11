@@ -41,12 +41,15 @@ end
 
 With this you can parse a simple bit of text:
 
+```ruby
 text = '<?xml version="1.0" encoding="UTF-8"?>'
 
 xml = XML.new( text: text )
+```
 
 or an entire file. For a file called data.xml:
 
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <catalog>
   <cd>
@@ -58,16 +61,20 @@ or an entire file. For a file called data.xml:
     <year>1985</year>
   </cd>
 </catalog>
+```
 
 your code can look like:
 
+```ruby
 require 'xml'
 
 catalog = XML.new 'data.xml'
 catalog.print
+```
 
 which will output:
 
+```
 tag, |<?xml version="1.0" encoding="UTF-8"?>|
 	name, |xml|
 	attribute, |version="1.0"|
@@ -114,9 +121,11 @@ close_tag, |</cd>|
 	name, |cd|
 close_tag, |</catalog>|
 	name, |catalog|
+```
 
 The Token class is an Array of Tokens and has 'name' and 'text' attributes. A Document is a kind of Token. You can iterate through the parsed file examining and editing tags and content. Given the prior code:
 
+```ruby
 # print a list of titles and artists
 catalog.each {|title|
 	puts title.name
@@ -131,6 +140,7 @@ catalog.each {|title|
 		index += 1
 	}
 }
+```
 
 It is important to note that in definitions order matters! The most specific cases must be matched before the more general ones.
 
