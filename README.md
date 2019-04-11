@@ -5,6 +5,7 @@ The magic_parser ruby gem provides an easy way to do most simple parsing of text
 
 xml.rb
 
+```ruby
 require 'magic_parser'
 
 class XMLParser < Parser
@@ -36,6 +37,7 @@ end
 class XML < Document
 	@@parser = XMLParser.new
 end
+```
 
 With this you can parse a simple bit of text:
 
